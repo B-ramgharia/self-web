@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Baljeet Singh</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Additional page-specific styles for projects.html */
+    .projects-hero {
+      padding: 8rem 5% 3rem;
+      text-align: center;
+    }
+    .projects-hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .projects-hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent2);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      margin-bottom: 2rem;
+    }
+    .back-btn:hover {
+      color: var(--accent3);
+    }
+    .project-detail-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.2rem;
+      transition: border-color 0.25s, transform 0.25s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .project-detail-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent3));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .project-detail-card:hover {
+      border-color: rgba(108, 99, 255, 0.4);
+      transform: translateY(-4px);
+    }
+    .project-detail-card:hover::before {
+      opacity: 1;
+    }
+    .project-actions {
+      margin-top: auto;
+      padding-top: 1.5rem;
+    }
+    .project-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid transparent;
+    }
+    .project-link-btn:hover {
+      background: #7c74ff;
+      transform: translateY(-2px);
+    }
+    .project-link-btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      margin-left: 8px;
+    }
+    .project-link-btn.secondary:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.03);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><a href="index.html" style="text-decoration: none; color: inherit;">BS.</a></div>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#certifications">Certifications</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PROJECTS HERO -->
+  <section class="projects-hero">
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+    <h1>My Projects</h1>
+    <p>A compilation of full-stack systems, academic work, and data science experiments built during my B.Tech studies.</p>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section id="detailed-projects" style="padding-top: 0;">
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-detail-card">
+        <div class="project-tag">FULL-STACK</div>
+        <h2 class="project-title" style="font-size: 1.3rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Ride-Sharing Full-Stack Application</h2>
+        <p class="project-desc" style="margin-bottom: 1.2rem; font-size: 0.92rem; line-height: 1.6;">A robust full-stack ride-sharing platform engineered to handle real-time ride bookings and concurrent user management securely and efficiently.</p>
+        
+        <h3 style="font-size: 0.85rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Key Contributions</h3>
+        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--muted); line-height: 1.7;">
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Engineered a complete backend infrastructure using Node.js, Express.js, and MongoDB.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Integrated Google Maps API for real-time GPS tracking and optimized route computations, reducing delivery estimation times by 30%.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Implemented JWT-based secure user registration, login authentication, and role-based permissions (rider vs. driver).</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Designed clean RESTful services to separate logic, enhancing overall scalability and future maintenance.</span>
+          </li>
+        </ul>
+        
+        <div class="project-tech" style="margin-bottom: 1.5rem;">
+          <span class="tech-pill">React.js</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Express.js</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">Google Maps API</span>
+          <span class="tech-pill">JWT Auth</span>
+        </div>
+        
+        <div class="project-actions">
+          <a href="https://b-ramgharia.github.io/ride-sharing/" class="project-link-btn live-link-btn" id="rideshare-live-link" target="_blank" rel="noopener noreferrer">Live Project Link 🌐</a>
+          <a href="https://github.com/B-ramgharia/ride-sharing" class="project-link-btn secondary" target="_blank" rel="noopener noreferrer">GitHub Code 🐙</a>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-detail-card">
+        <div class="project-tag">FLASK / PYTHON</div>
+        <h2 class="project-title" style="font-size: 1.3rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Digital Diary Web Application</h2>
+        <p class="project-desc" style="margin-bottom: 1.2rem; font-size: 0.92rem; line-height: 1.6;">A secure and responsive full-stack journaling application allowing users to persist personal logs with high data integrity.</p>
+        
+        <h3 style="font-size: 0.85rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Key Contributions</h3>
+        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--muted); line-height: 1.7;">
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Developed a lightweight, highly responsive application structure using Python's Flask framework.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Created schema mappings and backend storage logic with SQLite database, ensuring 100% data durability and clean retrievals.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Designed and styled mobile-responsive viewports using HTML5, CSS3, and JavaScript, ensuring a flawless mobile journaling experience.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Applied error validation on user inputs and secure endpoints to block unauthorized CRUD requests.</span>
+          </li>
+        </ul>
+        
+        <div class="project-tech" style="margin-bottom: 1.5rem;">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Flask</span>
+          <span class="tech-pill">SQLite</span>
+          <span class="tech-pill">HTML5</span>
+          <span class="tech-pill">CSS3</span>
+          <span class="tech-pill">JavaScript</span>
+        </div>
+        
+        <div class="project-actions">
+          <a href="https://diary1-fcr9.onrender.com" class="project-link-btn live-link-btn" id="diary-live-link" target="_blank" rel="noopener noreferrer">Live Project Link 🌐</a>
+          <a href="https://github.com/B-ramgharia/Diary" class="project-link-btn secondary" target="_blank" rel="noopener noreferrer">GitHub Code 🐙</a>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-detail-card">
+        <div class="project-tag">AI / DATA SCIENCE</div>
+        <h2 class="project-title" style="font-size: 1.3rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Academic Data & ML Projects</h2>
+        <p class="project-desc" style="margin-bottom: 1.2rem; font-size: 0.92rem; line-height: 1.6;">Exploratory data analysis, statistical model evaluations, and machine learning structures implemented throughout academic coursework.</p>
+        
+        <h3 style="font-size: 0.85rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">Key Contributions</h3>
+        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--muted); line-height: 1.7;">
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Leveraged Python scientific libraries (NumPy, Pandas) to perform extensive data cleaning and descriptive statistical tests.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Trained and evaluated basic supervised classifiers and regression models using Scikit-learn and TensorFlow.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Created beautiful visualization dashboards and data summary charts to communicate insights clearly.</span>
+          </li>
+          <li style="margin-bottom: 6px; display: flex; align-items: start; gap: 6px;">
+            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
+            <span>Solved 50+ DSA algorithmic exercises on LeetCode focusing on logic optimization.</span>
+          </li>
+        </ul>
+        
+        <div class="project-tech" style="margin-bottom: 1.5rem;">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Pandas</span>
+          <span class="tech-pill">NumPy</span>
+          <span class="tech-pill">Scikit-learn</span>
+          <span class="tech-pill">TensorFlow</span>
+          <span class="tech-pill">Data Visualization</span>
+        </div>
+        
+        <div class="project-actions">
+          <a href="https://github.com/B-ramgharia?tab=repositories" class="project-link-btn secondary" style="margin-left: 0;" target="_blank" rel="noopener noreferrer">GitHub Code 🐙</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="margin-top: 4rem;">
+    <p>Designed & Built by <span>Baljeet Singh</span> · CSE-DS · © 2026</p>
+  </footer>
+
+</body>
+
+</html>
