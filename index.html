@@ -3,174 +3,520 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Baljeet Singh, portfolio, CSE-DS, software developer, machine learning, full-stack" />
+  <meta name="description" content="Baljeet Singh | Final Year CSE-DS Student & Aspiring Software/ML Engineer. Portfolio showcasing projects, skills, and achievements." />
   <title>Baljeet Singh | CSE-DS Portfolio</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/chat.css" />
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">BS.</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+  <!-- ==================== SCROLL PROGRESS ==================== -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <h1>Hi, I'm<br /><span>Baljeet Singh</span></h1>
-      <p class="hero-sub">
-        4th Year CSE-DS student passionate about Python, Web Development,
-        and turning ideas into real-world solutions. Building things that matter.
-      </p>
+  <!-- ==================== GOKU SSJ LOADER ==================== -->
+  <div class="loader" id="loader">
+    <div class="goku-scene">
+      <!-- Stars background -->
+      <div class="stars"></div>
+      <div class="stars2"></div>
+
+      <!-- Ground shockwave -->
+      <div class="ground-ring"></div>
+      <div class="ground-ring ground-ring-2"></div>
+      <div class="ground-ring ground-ring-3"></div>
+
+      <!-- Aura outer layers -->
+      <div class="aura aura-outer"></div>
+      <div class="aura aura-mid"></div>
+      <div class="aura aura-inner"></div>
+
+      <!-- Lightning bolts -->
+      <div class="lightning l1"></div>
+      <div class="lightning l2"></div>
+      <div class="lightning l3"></div>
+      <div class="lightning l4"></div>
+      <div class="lightning l5"></div>
+      <div class="lightning l6"></div>
+      <div class="lightning l7"></div>
+      <div class="lightning l8"></div>
+
+      <!-- Goku SVG body -->
+      <div class="goku-body">
+        <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg" class="goku-svg">
+          <!-- SSJ Hair -->
+          <!-- Back spikes -->
+          <polygon points="50,60 35,10 45,50" fill="#ffd700" class="hair-spike"/>
+          <polygon points="55,58 45,2 53,48" fill="#ffed4a" class="hair-spike"/>
+          <polygon points="65,56 60,-5 65,45" fill="#ffd700" class="hair-spike"/>
+          <polygon points="70,58 75,0 72,47" fill="#ffed4a" class="hair-spike"/>
+          <polygon points="75,62 88,8 78,52" fill="#ffd700" class="hair-spike"/>
+          <!-- Side spikes -->
+          <polygon points="45,70 22,55 40,72" fill="#ffd700" class="hair-spike"/>
+          <polygon points="78,70 100,50 82,74" fill="#ffd700" class="hair-spike"/>
+          <!-- Hair base -->
+          <ellipse cx="62" cy="68" rx="24" ry="18" fill="#ffd700"/>
+
+          <!-- Goku face -->
+          <ellipse cx="62" cy="82" rx="18" ry="20" fill="#f4c69e"/>
+          <!-- Eyes - SSJ green -->
+          <ellipse cx="55" cy="80" rx="5" ry="4" fill="#00e5ff"/>
+          <ellipse cx="69" cy="80" rx="5" ry="4" fill="#00e5ff"/>
+          <ellipse cx="55" cy="80" rx="3" ry="3" fill="#004d66"/>
+          <ellipse cx="69" cy="80" rx="3" ry="3" fill="#004d66"/>
+          <!-- Eyebrows - angry -->
+          <line x1="50" y1="74" x2="60" y2="76" stroke="#3a2000" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="64" y1="76" x2="74" y2="74" stroke="#3a2000" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Mouth - determined -->
+          <path d="M56 92 Q62 88 68 92" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+          <!-- Ear -->
+          <ellipse cx="44" cy="84" rx="4" ry="5" fill="#f4c69e"/>
+          <ellipse cx="80" cy="84" rx="4" ry="5" fill="#f4c69e"/>
+
+          <!-- Gi/Uniform - orange top -->
+          <path d="M44 100 Q62 105 80 100 L85 140 Q62 148 39 140 Z" fill="#ff6600"/>
+          <!-- Belt -->
+          <rect x="42" y="136" width="40" height="8" rx="2" fill="#1a1a1a"/>
+          <!-- Blue undershirt -->
+          <path d="M50 100 Q62 106 74 100 L72 118 Q62 122 52 118 Z" fill="#1a4db5"/>
+          <!-- Gi wrinkles -->
+          <line x1="50" y1="108" x2="48" y2="130" stroke="#cc4400" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          <line x1="65" y1="108" x2="66" y2="132" stroke="#cc4400" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          <!-- Shoulder bands -->
+          <path d="M44 100 L38 108 L44 115" fill="none" stroke="#ff6600" stroke-width="5" stroke-linecap="round"/>
+          <path d="M80 100 L86 108 L80 115" fill="none" stroke="#ff6600" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- Arms -->
+          <!-- Left arm -->
+          <path d="M44 102 Q30 118 28 138" fill="none" stroke="#f4c69e" stroke-width="11" stroke-linecap="round"/>
+          <path d="M44 102 Q30 118 28 138" fill="none" stroke="#ff6600" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+          <!-- Right arm raised powerup -->
+          <path d="M80 102 Q96 90 100 75" fill="none" stroke="#f4c69e" stroke-width="11" stroke-linecap="round"/>
+          <!-- Hands -->
+          <ellipse cx="28" cy="140" rx="6" ry="5" fill="#f4c69e"/>
+          <ellipse cx="101" cy="73" rx="6" ry="5" fill="#f4c69e"/>
+
+          <!-- Energy ball in raised hand -->
+          <circle cx="101" cy="68" r="10" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.8" class="energy-ball"/>
+          <circle cx="101" cy="68" r="7" fill="rgba(0,230,255,0.3)" class="energy-ball"/>
+          <circle cx="101" cy="68" r="4" fill="#00e5ff" class="energy-ball"/>
+
+          <!-- Pants -->
+          <path d="M42 140 L38 195 L58 195 L62 165 L66 195 L86 195 L82 140 Z" fill="#1a1a1a"/>
+          <!-- Boots -->
+          <rect x="35" y="188" width="24" height="12" rx="4" fill="#1a4db5"/>
+          <rect x="63" y="188" width="24" height="12" rx="4" fill="#1a4db5"/>
+          <!-- Boot line -->
+          <line x1="35" y1="192" x2="59" y2="192" stroke="#0d2f70" stroke-width="2"/>
+          <line x1="63" y1="192" x2="87" y2="192" stroke="#0d2f70" stroke-width="2"/>
+        </svg>
+
+        <!-- SSJ golden aura glow over hair -->
+        <div class="hair-glow"></div>
+      </div>
+
+      <!-- Aura tendrils -->
+      <div class="tendril t1"></div>
+      <div class="tendril t2"></div>
+      <div class="tendril t3"></div>
+      <div class="tendril t4"></div>
+      <div class="tendril t5"></div>
+      <div class="tendril t6"></div>
+      <div class="tendril t7"></div>
+      <div class="tendril t8"></div>
+      <div class="tendril t9"></div>
+      <div class="tendril t10"></div>
+
+      <!-- Energy particles -->
+      <div class="ep ep1"></div>
+      <div class="ep ep2"></div>
+      <div class="ep ep3"></div>
+      <div class="ep ep4"></div>
+      <div class="ep ep5"></div>
+      <div class="ep ep6"></div>
+      <div class="ep ep7"></div>
+      <div class="ep ep8"></div>
+      <div class="ep ep9"></div>
+      <div class="ep ep10"></div>
+      <div class="ep ep11"></div>
+      <div class="ep ep12"></div>
+
+      <!-- KI Charge Power Bar -->
+      <div class="ki-bar-wrap">
+        <div class="ki-bar-label">Ki Level</div>
+        <div class="ki-bar-track">
+          <div class="ki-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="ssj-text">
+        <span class="ssj-label">SUPER SAIYAN</span>
+        <span class="ssj-name">BALJEET</span>
+        <span class="ssj-sub">Loading Portfolio...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CURSOR ==================== -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header id="header">
+    <a href="#home" class="logo">
+      <span class="logo-text">BS<span class="logo-dot">.</span></span>
+    </a>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Dark/Light Mode Toggle -->
+      <label class="theme-switch" id="themeToggle" title="Toggle theme">
+        <input type="checkbox" id="darkmode-toggle" />
+        <div class="track">
+          <div class="thumb">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </div>
+        </div>
+      </label>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="home" id="home">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to Internships & Opportunities
+      </div>
+      <h1>Hi There, <br />I'm Baljeet <span class="gradient-text">Singh</span></h1>
+      <p class="hero-sub">i am into <span class="typing-text"></span></p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary">Get In Touch →</a>
-        <a href="#skills" class="btn btn-outline">View My Skills</a>
+        <a href="#about" class="btn btn-primary">
+          About Me <i class="fas fa-arrow-down"></i>
+        </a>
+        <a href="projects.html" class="btn btn-outline">
+          View Projects <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/baljeet-singh-8613b7317/" target="_blank" rel="noopener" class="social-icon linkedin" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/B-ramgharia" target="_blank" rel="noopener" class="social-icon github" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:baljeet.rathor2005@gmail.com" class="social-icon email" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+919319627341" class="social-icon phone" aria-label="Phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-3d">
+        <div class="card-inner">
+          <div class="card-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-text">BS</div>
+          </div>
+          <div class="card-info">
+            <div class="card-name">Baljeet Singh</div>
+            <div class="card-role">CSE-DS Engineer</div>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>React.js</span>
+              <span>ML</span>
+            </div>
+          </div>
+          <div class="card-stats">
+            <div class="c-stat">
+              <div class="c-num">4th</div>
+              <div class="c-label">Year</div>
+            </div>
+            <div class="c-stat">
+              <div class="c-num">50+</div>
+              <div class="c-label">LeetCode</div>
+            </div>
+            <div class="c-stat">
+              <div class="c-num">2+</div>
+              <div class="c-label">Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section class="about" id="about">
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-user-alt"></i> Who I Am</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+    </div>
+
+    <div class="about-row">
+      <div class="about-image-wrap">
+        <div class="about-img-card">
+          <div class="about-img-placeholder">
+            <div class="about-initials">BS</div>
+            <div class="floating-badge top-right">
+              <i class="fas fa-code"></i> Developer
+            </div>
+            <div class="floating-badge bottom-left">
+              <i class="fas fa-graduation-cap"></i> GTBIT
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h3>I'm <span class="gradient-text">Baljeet Singh</span></h3>
+        <span class="about-tag">Software Developer & ML Enthusiast</span>
+
+        <p>I am a final-year B.Tech student at <strong>Guru Tegh Bahadur Institute of Technology</strong> specializing in Computer Science & Engineering (Data Science). I have a deep curiosity for machine learning, Python, and full-stack web development — turning data-driven ideas into real-world solutions.</p>
+
+        <p>My technical coursework includes Data Structures & Algorithms, Database Management Systems, Machine Learning, Web Technologies, and Statistics. I have built secure web applications using React.js, Node.js, Express.js, Flask, and MongoDB/SQLite.</p>
+
+        <p>Currently seeking an <strong>AI/ML or Software Engineering internship</strong> where I can apply my algorithms, data analysis, and full-stack capabilities to real-world challenges.</p>
+
+        <div class="about-info-grid">
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
+            <span class="info-value">baljeet.rathor2005@gmail.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+            <span class="info-value">Delhi, India</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-university"></i> College</span>
+            <span class="info-value">GTBIT, Delhi</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-calendar"></i> Graduation</span>
+            <span class="info-value">2026</span>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="#contact" class="btn btn-primary">Get In Touch <i class="fas fa-paper-plane"></i></a>
+          <a href="https://github.com/B-ramgharia" target="_blank" rel="noopener" class="btn btn-outline">GitHub Profile <i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="github-quote-wrap">
+          <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="GitHub Readme Quote" class="github-quote-img" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-label">Who I Am</div>
-    <div class="section-title">About Me</div>
-    <div class="about-grid">
-      <div>
-        <div class="about-text">
-          <p>I'm Baljeet Singh, a final-year B.Tech student at <strong>Guru Tegh Bahadur Institute of
-              Technology</strong> specializing in Computer Science & Engineering (Data Science). I have a deep curiosity
-            for machine learning, Python, and full-stack web development, and turning data-driven ideas into real-world
-            solutions.</p>
-          <p>My technical coursework includes Data Structures & Algorithms, Database Management Systems, Machine
-            Learning, Web Technologies, and Statistics. I have built secure web applications using React.js, Node.js,
-            Express.js, Flask, and MongoDB/SQLite, always focusing on clean, scalable code.</p>
-          <p>I am currently seeking an AI/ML or Software Engineering internship where I can apply my algorithms, data
-            analysis, and full-stack capabilities to real-world challenges.</p>
+  <!-- ==================== TECH STACK / SKILLS TICKER ==================== -->
+  <section class="tech-stack-section" id="skills">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-layer-group"></i> What I Know</span>
+      <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+    </div>
+
+    <!-- Ticker Row 1 -->
+    <div class="slider-container">
+      <div class="slider-track" id="track1">
+        <div class="tech-item"><div class="tech-icon python-icon"><i class="fab fa-python"></i></div><div class="tech-name">Python</div></div>
+        <div class="tech-item"><div class="tech-icon js-icon"><i class="fab fa-js-square"></i></div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item"><div class="tech-icon react-icon"><i class="fab fa-react"></i></div><div class="tech-name">React.js</div></div>
+        <div class="tech-item"><div class="tech-icon node-icon"><i class="fab fa-node-js"></i></div><div class="tech-name">Node.js</div></div>
+        <div class="tech-item"><div class="tech-icon html-icon"><i class="fab fa-html5"></i></div><div class="tech-name">HTML5</div></div>
+        <div class="tech-item"><div class="tech-icon css-icon"><i class="fab fa-css3-alt"></i></div><div class="tech-name">CSS3</div></div>
+        <div class="tech-item"><div class="tech-icon git-icon"><i class="fab fa-git-alt"></i></div><div class="tech-name">Git</div></div>
+        <div class="tech-item"><div class="tech-icon github-icon2"><i class="fab fa-github"></i></div><div class="tech-name">GitHub</div></div>
+        <!-- duplicates for seamless loop -->
+        <div class="tech-item"><div class="tech-icon python-icon"><i class="fab fa-python"></i></div><div class="tech-name">Python</div></div>
+        <div class="tech-item"><div class="tech-icon js-icon"><i class="fab fa-js-square"></i></div><div class="tech-name">JavaScript</div></div>
+        <div class="tech-item"><div class="tech-icon react-icon"><i class="fab fa-react"></i></div><div class="tech-name">React.js</div></div>
+        <div class="tech-item"><div class="tech-icon node-icon"><i class="fab fa-node-js"></i></div><div class="tech-name">Node.js</div></div>
+        <div class="tech-item"><div class="tech-icon html-icon"><i class="fab fa-html5"></i></div><div class="tech-name">HTML5</div></div>
+        <div class="tech-item"><div class="tech-icon css-icon"><i class="fab fa-css3-alt"></i></div><div class="tech-name">CSS3</div></div>
+        <div class="tech-item"><div class="tech-icon git-icon"><i class="fab fa-git-alt"></i></div><div class="tech-name">Git</div></div>
+        <div class="tech-item"><div class="tech-icon github-icon2"><i class="fab fa-github"></i></div><div class="tech-name">GitHub</div></div>
+      </div>
+    </div>
+
+    <!-- Ticker Row 2 -->
+    <div class="slider-container">
+      <div class="slider-track slider-track-2" id="track2">
+        <div class="tech-item"><div class="tech-icon flask-icon"><i class="fas fa-flask"></i></div><div class="tech-name">Flask</div></div>
+        <div class="tech-item"><div class="tech-icon db-icon"><i class="fas fa-database"></i></div><div class="tech-name">MongoDB</div></div>
+        <div class="tech-item"><div class="tech-icon sql-icon"><i class="fas fa-server"></i></div><div class="tech-name">MySQL</div></div>
+        <div class="tech-item"><div class="tech-icon ai-icon"><i class="fas fa-brain"></i></div><div class="tech-name">ML / AI</div></div>
+        <div class="tech-item"><div class="tech-icon pandas-icon"><i class="fas fa-chart-bar"></i></div><div class="tech-name">Pandas</div></div>
+        <div class="tech-item"><div class="tech-icon numpy-icon"><i class="fas fa-superscript"></i></div><div class="tech-name">NumPy</div></div>
+        <div class="tech-item"><div class="tech-icon sk-icon"><i class="fas fa-robot"></i></div><div class="tech-name">Scikit-learn</div></div>
+        <div class="tech-item"><div class="tech-icon vscode-icon"><i class="fas fa-code"></i></div><div class="tech-name">VS Code</div></div>
+        <!-- duplicates -->
+        <div class="tech-item"><div class="tech-icon flask-icon"><i class="fas fa-flask"></i></div><div class="tech-name">Flask</div></div>
+        <div class="tech-item"><div class="tech-icon db-icon"><i class="fas fa-database"></i></div><div class="tech-name">MongoDB</div></div>
+        <div class="tech-item"><div class="tech-icon sql-icon"><i class="fas fa-server"></i></div><div class="tech-name">MySQL</div></div>
+        <div class="tech-item"><div class="tech-icon ai-icon"><i class="fas fa-brain"></i></div><div class="tech-name">ML / AI</div></div>
+        <div class="tech-item"><div class="tech-icon pandas-icon"><i class="fas fa-chart-bar"></i></div><div class="tech-name">Pandas</div></div>
+        <div class="tech-item"><div class="tech-icon numpy-icon"><i class="fas fa-superscript"></i></div><div class="tech-name">NumPy</div></div>
+        <div class="tech-item"><div class="tech-icon sk-icon"><i class="fas fa-robot"></i></div><div class="tech-name">Scikit-learn</div></div>
+        <div class="tech-item"><div class="tech-icon vscode-icon"><i class="fas fa-code"></i></div><div class="tech-name">VS Code</div></div>
+      </div>
+    </div>
+
+    <!-- Skill Detail Cards -->
+    <div class="skills-cards-grid">
+      <div class="skill-detail-card">
+        <div class="skill-card-icon" style="color:#f7df1e;"><i class="fab fa-js-square"></i></div>
+        <div class="skill-card-body">
+          <div class="skill-card-name">Programming Languages</div>
+          <div class="skill-card-desc">Python, JavaScript, Java, C++, HTML5, CSS3</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="--w:85%"></div></div>
         </div>
       </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <div class="stat-num">4th</div>
-          <div class="stat-label">Year of B.Tech</div>
+      <div class="skill-detail-card">
+        <div class="skill-card-icon" style="color:#61dafb;"><i class="fab fa-react"></i></div>
+        <div class="skill-card-body">
+          <div class="skill-card-name">Web Development</div>
+          <div class="skill-card-desc">React.js, Node.js, Express.js, Flask, REST APIs</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="--w:80%"></div></div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">GTBIT</div>
-          <div class="stat-label">Guru Tegh Bahadur Inst.</div>
+      </div>
+      <div class="skill-detail-card">
+        <div class="skill-card-icon" style="color:#4ade80;"><i class="fas fa-brain"></i></div>
+        <div class="skill-card-body">
+          <div class="skill-card-name">AI & Data Science</div>
+          <div class="skill-card-desc">ML, Deep Learning, NLP, NumPy, Pandas, Scikit-learn</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="--w:70%"></div></div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">2+</div>
-          <div class="stat-label">Full-Stack Projects</div>
+      </div>
+      <div class="skill-detail-card">
+        <div class="skill-card-icon" style="color:#38bdf8;"><i class="fas fa-database"></i></div>
+        <div class="skill-card-body">
+          <div class="skill-card-name">Databases</div>
+          <div class="skill-card-desc">MongoDB, MySQL, SQLite, SQL</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="--w:75%"></div></div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">50+</div>
-          <div class="stat-label">LeetCode Problems</div>
+      </div>
+      <div class="skill-detail-card">
+        <div class="skill-card-icon" style="color:#a78bfa;"><i class="fab fa-git-alt"></i></div>
+        <div class="skill-card-body">
+          <div class="skill-card-name">Tools & Platforms</div>
+          <div class="skill-card-desc">Git, GitHub, Postman, VS Code, RESTful APIs</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="--w:80%"></div></div>
+        </div>
+      </div>
+      <div class="skill-detail-card">
+        <div class="skill-card-icon" style="color:#fb923c;"><i class="fas fa-sitemap"></i></div>
+        <div class="skill-card-body">
+          <div class="skill-card-name">Core Competencies</div>
+          <div class="skill-card-desc">DSA, OOP, Agile Dev, Problem Solving, 50+ LeetCode</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="--w:80%"></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills-bg">
-    <div class="section-label">What I Know</div>
-    <div class="section-title">My Skills</div>
-    <div class="skills-grid">
+  <!-- ==================== EDUCATION SECTION ==================== -->
+  <section class="education" id="education">
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-graduation-cap"></i> My Journey</span>
+      <h2 class="section-title">Edu<span class="gradient-text">cation</span></h2>
+    </div>
 
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(250,204,21,0.12);">🐍</div>
-        <div class="skill-name">Programming Languages</div>
-        <div class="skill-desc">Expertise in Python for scripting, ML, and automation. Core knowledge of JavaScript,
-          Java, C++, HTML5, and CSS3.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:85%"></div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><i class="fas fa-university"></i></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2022 – 2026</div>
+          <div class="timeline-degree">B.Tech — Computer Science & Engineering (Data Science)</div>
+          <div class="timeline-school"><i class="fas fa-map-marker-alt"></i> Guru Tegh Bahadur Institute of Technology, Delhi</div>
+          <p class="timeline-desc">Currently in 4th year. Relevant coursework: Data Structures & Algorithms, Machine Learning, Database Management Systems, Web Technologies, Statistics, and OOP.</p>
+          <div class="timeline-tags">
+            <span>CSE-DS</span>
+            <span>B.Tech</span>
+            <span>GGSIPU</span>
+          </div>
         </div>
       </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(56,189,248,0.12);">🌐</div>
-        <div class="skill-name">Web Development</div>
-        <div class="skill-desc">Experienced in full-stack web development using React.js, Node.js, Express.js, and Flask
-          frameworks.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:80%"></div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><i class="fas fa-school"></i></div>
+        <div class="timeline-card">
+          <div class="timeline-year">2020 – 2022</div>
+          <div class="timeline-degree">Class XII — Science (PCM + Computer Science)</div>
+          <div class="timeline-school"><i class="fas fa-map-marker-alt"></i> CBSE Board, Delhi</div>
+          <p class="timeline-desc">Completed senior secondary with Physics, Chemistry, Mathematics, and Computer Science — building a strong foundation in analytical thinking and programming.</p>
+          <div class="timeline-tags">
+            <span>CBSE</span>
+            <span>Science</span>
+            <span>PCM</span>
+          </div>
         </div>
       </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(74,222,128,0.12);">📊</div>
-        <div class="skill-name">AI & Data Science</div>
-        <div class="skill-desc">Studying machine learning, deep learning, NLP, and data analysis using NumPy, Pandas,
-          Scikit-learn, and TensorFlow.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:70%"></div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(59,130,246,0.12);">💾</div>
-        <div class="skill-name">Databases & Storage</div>
-        <div class="skill-desc">Solid understanding of relational and document databases including MongoDB, SQL, MySQL,
-          and SQLite.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:75%"></div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(168,85,247,0.12);">🛠️</div>
-        <div class="skill-name">Tools & Platforms</div>
-        <div class="skill-desc">Proficient with Git, GitHub version control, RESTful APIs, Google Maps API, VS Code, and
-          Postman.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:80%"></div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(239,68,68,0.12);">🧠</div>
-        <div class="skill-name">Core Competencies</div>
-        <div class="skill-desc">Strong in Data Structures & Algorithms, Object-Oriented Programming (OOP), and Agile
-          Development methodologies.</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" style="width:80%"></div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-label">What I've Built</div>
-    <div class="section-title">Projects</div>
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section class="projects-section" id="projects">
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-laptop-code"></i> What I've Built</span>
+      <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+    </div>
+
     <div class="projects-grid">
 
-      <div class="project-card">
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-car"></i></div>
+          <div class="project-links">
+            <a href="https://b-ramgharia.github.io/ride-sharing/" target="_blank" rel="noopener" class="proj-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/B-ramgharia/ride-sharing" target="_blank" rel="noopener" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
         <div class="project-tag">FULL-STACK</div>
         <div class="project-title">Ride-Sharing Full-Stack App</div>
-        <p class="project-desc" style="margin-bottom: 0.8rem;">Engineered a concurrent, real-time ride-sharing platform
-          using React.js, Node.js, Express.js, and MongoDB.</p>
-        <ul
-          style="list-style-type: none; padding-left: 0; margin-bottom: 1.2rem; font-size: 0.82rem; color: var(--muted); line-height: 1.6;">
-          <li style="margin-bottom: 4px; display: flex; align-items: start; gap: 6px;">
-            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
-            <span>Integrated Google Maps API for live GPS tracking and route optimization (reducing route calculation
-              times by 30%).</span>
-          </li>
-          <li style="margin-bottom: 4px; display: flex; align-items: start; gap: 6px;">
-            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
-            <span>Implemented JWT-based secure user authentication and role-based access control.</span>
-          </li>
-        </ul>
+        <p class="project-desc">Real-time ride-sharing platform with live GPS tracking, JWT authentication, and role-based access. Integrated Google Maps API — reducing route calculation times by 30%.</p>
         <div class="project-tech">
           <span class="tech-pill">React.js</span>
           <span class="tech-pill">Node.js</span>
@@ -180,23 +526,17 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-book-open"></i></div>
+          <div class="project-links">
+            <a href="https://diary1-fcr9.onrender.com" target="_blank" rel="noopener" class="proj-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/B-ramgharia/Diary" target="_blank" rel="noopener" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
         <div class="project-tag">FLASK / PYTHON</div>
-        <div class="project-title">Digital Diary Web Application</div>
-        <p class="project-desc" style="margin-bottom: 0.8rem;">Developed a secure, responsive full-stack personal
-          journaling app using Python and Flask framework.</p>
-        <ul
-          style="list-style-type: none; padding-left: 0; margin-bottom: 1.2rem; font-size: 0.82rem; color: var(--muted); line-height: 1.6;">
-          <li style="margin-bottom: 4px; display: flex; align-items: start; gap: 6px;">
-            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
-            <span>Designed SQLite persistence logic with structured data storage to guarantee 100% user data
-              integrity.</span>
-          </li>
-          <li style="margin-bottom: 4px; display: flex; align-items: start; gap: 6px;">
-            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
-            <span>Built clean, mobile-responsive layouts for seamless entry creation, modification, and search.</span>
-          </li>
-        </ul>
+        <div class="project-title">Digital Diary Web App</div>
+        <p class="project-desc">Secure, responsive full-stack journaling application using Python & Flask. SQLite persistence with 100% data integrity, mobile-responsive layouts, and secure CRUD endpoints.</p>
         <div class="project-tech">
           <span class="tech-pill">Python</span>
           <span class="tech-pill">Flask</span>
@@ -206,23 +546,16 @@
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-tag">AI & DATA SPECIALIZATION</div>
+      <div class="project-card reveal">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/B-ramgharia?tab=repositories" target="_blank" rel="noopener" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-tag">AI & DATA SCIENCE</div>
         <div class="project-title">Academic Data & ML Projects</div>
-        <p class="project-desc" style="margin-bottom: 0.8rem;">Completed data analysis, cleaning, visualization, and
-          modeling projects in college coursework.</p>
-        <ul
-          style="list-style-type: none; padding-left: 0; margin-bottom: 1.2rem; font-size: 0.82rem; color: var(--muted); line-height: 1.6;">
-          <li style="margin-bottom: 4px; display: flex; align-items: start; gap: 6px;">
-            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
-            <span>Applied Pandas, NumPy, and Scikit-learn for processing datasets, statistical evaluation, and
-              modeling.</span>
-          </li>
-          <li style="margin-bottom: 4px; display: flex; align-items: start; gap: 6px;">
-            <span style="color: var(--accent2); flex-shrink: 0;">•</span>
-            <span>Practiced core OOP design, problem-solving in DSA (50+ LeetCode problems solved).</span>
-          </li>
-        </ul>
+        <p class="project-desc">Data analysis, cleaning, visualization, and supervised ML modeling projects. Applied Pandas, NumPy, Scikit-learn; practiced DSA with 50+ LeetCode problems.</p>
         <div class="project-tech">
           <span class="tech-pill">NumPy</span>
           <span class="tech-pill">Pandas</span>
@@ -232,163 +565,380 @@
       </div>
 
     </div>
-    <div style="text-align: center; margin-top: 3.5rem;">
-      <a href="projects.html" class="btn btn-outline">View Detailed Projects Page →</a>
+
+    <div class="projects-cta">
+      <a href="projects.html" class="btn btn-outline">View Detailed Projects Page <i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="skills-bg">
-    <div class="section-label">Achievements</div>
-    <div class="section-title">Certifications & Coursework</div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(59,130,246,0.12);">📜</div>
-        <div class="skill-name">Python for Everybody</div>
-        <div class="skill-desc">University of Michigan / Coursera — Completed comprehensive Python training covering
-          data structures, databases, and network programming.</div>
+  <!-- ==================== EXPERIENCE SECTION ==================== -->
+  <section class="experience" id="experience">
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-briefcase"></i> My Journey</span>
+      <h2 class="section-title">Experi<span class="gradient-text">ence</span></h2>
+    </div>
+
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-dot"><i class="fas fa-code"></i></div>
+        <div class="exp-card">
+          <div class="exp-meta">
+            <div class="exp-role">Full-Stack Developer (Academic Projects)</div>
+            <div class="exp-period"><i class="fas fa-calendar-alt"></i> 2023 – Present</div>
+          </div>
+          <div class="exp-company">Self-Directed | GTBIT, Delhi</div>
+          <ul class="exp-points">
+            <li>Built a complete ride-sharing platform with real-time GPS, JWT auth, and RESTful APIs using React.js, Node.js, Express.js, and MongoDB.</li>
+            <li>Developed a secure digital diary application with Flask, SQLite, mobile-responsive design, and input validation.</li>
+            <li>Implemented clean architecture patterns focusing on scalability and separation of concerns.</li>
+          </ul>
+          <div class="exp-tags">
+            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Flask</span>
+          </div>
+        </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(74,222,128,0.12);">🏆</div>
-        <div class="skill-name">Data Structures & Algorithms</div>
-        <div class="skill-desc">Self-study — Solved 50+ problems on LeetCode focusing on sorting, searching, trees,
-          graphs, and dynamic programming.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(168,85,247,0.12);">💻</div>
-        <div class="skill-name">The Web Developer Bootcamp</div>
-        <div class="skill-desc">Udemy — Full-stack developer training covering front-end and back-end development with
-          React, Node.js, Express, and MongoDB.</div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot"><i class="fas fa-brain"></i></div>
+        <div class="exp-card">
+          <div class="exp-meta">
+            <div class="exp-role">Data Science & ML Practitioner</div>
+            <div class="exp-period"><i class="fas fa-calendar-alt"></i> 2022 – Present</div>
+          </div>
+          <div class="exp-company">Academic Coursework | GTBIT, Delhi</div>
+          <ul class="exp-points">
+            <li>Applied Pandas, NumPy, and Scikit-learn for data cleaning, analysis, and supervised ML model training.</li>
+            <li>Studied Machine Learning, Deep Learning concepts, and NLP fundamentals.</li>
+            <li>Solved 50+ DSA problems on LeetCode covering trees, graphs, dynamic programming, and sorting algorithms.</li>
+          </ul>
+          <div class="exp-tags">
+            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>DSA</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-label">Say Hello</div>
-    <div class="section-title">Contact Me</div>
+  <!-- ==================== CERTIFICATIONS ==================== -->
+  <section class="certifications-section" id="certifications">
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-award"></i> Achievements</span>
+      <h2 class="section-title">Certifi<span class="gradient-text">cations</span></h2>
+    </div>
+
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-badge"><i class="fab fa-python"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">Python for Everybody</div>
+          <div class="cert-issuer">University of Michigan / Coursera</div>
+          <div class="cert-desc">Comprehensive Python training covering data structures, databases, web scraping, and network programming across 5 courses.</div>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-tag">Coursera</span>
+          <span class="cert-tag">Python</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-badge"><i class="fas fa-sitemap"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">Data Structures & Algorithms</div>
+          <div class="cert-issuer">Self-Study / LeetCode</div>
+          <div class="cert-desc">Solved 50+ problems focusing on sorting, searching, binary trees, graph traversal, and dynamic programming patterns.</div>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-tag">LeetCode</span>
+          <span class="cert-tag">DSA</span>
+        </div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-badge"><i class="fas fa-globe"></i></div>
+        <div class="cert-body">
+          <div class="cert-name">The Web Developer Bootcamp</div>
+          <div class="cert-issuer">Udemy</div>
+          <div class="cert-desc">Full-stack developer training covering HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB with real project builds.</div>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-tag">Udemy</span>
+          <span class="cert-tag">Full-Stack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <span class="section-label"><i class="fas fa-paper-plane"></i> Say Hello</span>
+      <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+    </div>
+
     <div class="contact-grid">
       <div class="contact-info">
-        <p>I'm currently open to internships, freelance projects, and full-time opportunities. Whether you have a
-          question or just want to say hi — my inbox is always open!</p>
-        <div class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div class="contact-detail">
-            <strong>Email</strong>
-            <span><a href="mailto:baljeet.rathor2005@gmail.com">baljeet.rathor2005@gmail.com</a></span>
+        <p>I'm currently open to internships, freelance projects, and full-time opportunities. Whether you have a question or just want to say hi — my inbox is always open!</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <strong>Email</strong>
+              <a href="mailto:baljeet.rathor2005@gmail.com">baljeet.rathor2005@gmail.com</a>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <div class="contact-detail">
-            <strong>Phone</strong>
-            <span><a href="tel:+919319627341">+91 9319627341</a></span>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-detail">
+              <strong>Phone</strong>
+              <a href="tel:+919319627341">+91 9319627341</a>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-detail">
-            <strong>Location</strong>
-            <span>Delhi, India</span>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail">
+              <strong>Location</strong>
+              <span>Delhi, India</span>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-detail">
-            <strong>LinkedIn</strong>
-            <span><a href="https://www.linkedin.com/in/baljeet-singh-8613b7317/" target="_blank"
-                rel="noopener noreferrer">linkedin.com/in/baljeet-singh-8613b7317</a></span>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="contact-detail">
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/baljeet-singh-8613b7317/" target="_blank" rel="noopener">linkedin.com/in/baljeet-singh</a>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🐙</div>
-          <div class="contact-detail">
-            <strong>GitHub</strong>
-            <span><a href="https://github.com/B-ramgharia" target="_blank"
-                rel="noopener noreferrer">github.com/B-ramgharia</a></span>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-detail">
+              <strong>GitHub</strong>
+              <a href="https://github.com/B-ramgharia" target="_blank" rel="noopener">github.com/B-ramgharia</a>
+            </div>
           </div>
         </div>
       </div>
-      <div>
+
+      <div class="contact-form-wrap">
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label>Your Name</label>
+              <label for="nameInput">Your Name</label>
               <input type="text" id="nameInput" placeholder="Name" required />
             </div>
             <div class="form-group">
-              <label>Your Email</label>
+              <label for="emailInput">Your Email</label>
               <input type="email" id="emailInput" placeholder="email@example.com" required />
             </div>
           </div>
           <div class="form-group">
-            <label>Subject</label>
+            <label for="subjectInput">Subject</label>
             <input type="text" id="subjectInput" placeholder="Internship Opportunity / Collaboration" required />
           </div>
           <div class="form-group">
-            <label>Message</label>
+            <label for="messageInput">Message</label>
             <textarea id="messageInput" placeholder="Hi Baljeet, I'd love to connect about..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full btn-submit">Send Message →</button>
+          <button type="submit" class="btn btn-primary btn-full btn-submit" id="submitBtn">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ==================== FOOTER ==================== -->
   <footer>
-    <p>Designed & Built by <span>Baljeet Singh</span> · CSE-DS · © 2026</p>
+    <div class="footer-inner">
+      <div class="footer-logo">BS<span class="logo-dot">.</span></div>
+      <p>Designed & Built with <i class="fas fa-heart" style="color:#f43f5e;"></i> by <span>Baljeet Singh</span> · CSE-DS · © 2026</p>
+      <div class="footer-socials">
+        <a href="https://github.com/B-ramgharia" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/baljeet-singh-8613b7317/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:baljeet.rathor2005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </footer>
 
-  <!-- TOAST NOTIFICATION CONTAINER -->
+  <!-- ==================== TOAST ==================== -->
   <div id="toast" class="toast">
-    <div class="toast-icon">✓</div>
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
     <div class="toast-content" id="toastMessage">Message sent! Baljeet will get back to you soon 🙌</div>
   </div>
 
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+
   <script>
+    // ===== LOADER — Goku SSJ Transformation (3.5s display) =====
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 800);
+      }, 3500);
+    });
+
+    // ===== PROGRESS BAR =====
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const pct = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progressBar').style.width = pct + '%';
+    });
+
+    // ===== CUSTOM CURSOR =====
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursorFollower');
+    let fx = 0, fy = 0;
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      fx += (e.clientX - fx) * 0.12;
+      fy += (e.clientY - fy) * 0.12;
+      follower.style.left = e.clientX + 'px';
+      follower.style.top = e.clientY + 'px';
+    });
+    document.querySelectorAll('a, button, .btn, .social-icon').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); follower.classList.add('hover'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); follower.classList.remove('hover'); });
+    });
+
+    // ===== PARTICLES.JS — Reference site color palette =====
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 90, density: { enable: true, value_area: 900 } },
+        color: { value: ['#8a2be2', '#4a90e2', '#00d9ff', '#ffd700'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.55, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 140, color: '#8a2be2', opacity: 0.18, width: 1 },
+        move: { enable: true, speed: 1.8, direction: 'none', random: true, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } },
+        modes: { grab: { distance: 160, line_linked: { opacity: 0.5 } }, push: { particles_nb: 5 } }
+      },
+      retina_detect: true
+    });
+
+    // ===== TYPED.JS =====
+    new Typed('.typing-text', {
+      strings: ['Python development', 'Full-Stack web apps', 'Machine Learning', 'Data Science', 'building real-world solutions'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true
+    });
+
+    // ===== MOBILE NAV =====
+    const menuToggle = document.getElementById('menuToggle');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navbar.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navbar.classList.remove('open');
+      });
+    });
+
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ===== ACTIVE NAV LINK =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) cur = sec.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + cur) link.classList.add('active');
+      });
+    });
+
+    // ===== DARK/LIGHT MODE =====
+    const toggle = document.getElementById('darkmode-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      toggle.checked = true;
+    }
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // ===== TECH STACK TICKER =====
+    function initTicker() {
+      const track1 = document.getElementById('track1');
+      const track2 = document.getElementById('track2');
+      if (track1) {
+        const w1 = track1.scrollWidth / 2;
+        track1.style.setProperty('--tech-distance', w1 + 'px');
+        track1.style.animationDuration = (w1 / 60) + 's';
+      }
+      if (track2) {
+        const w2 = track2.scrollWidth / 2;
+        track2.style.setProperty('--tech-distance', w2 + 'px');
+        track2.style.animationDuration = (w2 / 50) + 's';
+      }
+    }
+    window.addEventListener('load', initTicker);
+
+    // ===== SCROLL REVEAL =====
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ===== CONTACT FORM =====
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
-
-      const form = this;
-      const btn = form.querySelector('.btn-submit');
-      const btnOriginalContent = btn.innerHTML;
-
-      // Perform validation check
+      const btn = document.getElementById('submitBtn');
       const name = document.getElementById('nameInput').value.trim();
       const email = document.getElementById('emailInput').value.trim();
       const subject = document.getElementById('subjectInput').value.trim();
       const message = document.getElementById('messageInput').value.trim();
+      if (!name || !email || !subject || !message) return;
 
-      if (!name || !email || !subject || !message) {
-        return;
-      }
-
-      // Update button to loading state
       btn.disabled = true;
       btn.innerHTML = '<span class="spinner"></span> Sending...';
 
-      // Simulate sending process
-      setTimeout(function () {
-        // Reset button
+      setTimeout(() => {
         btn.disabled = false;
-        btn.innerHTML = btnOriginalContent;
-
-        // Show success toast
+        btn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
         const toast = document.getElementById('toast');
         toast.classList.add('show');
-
-        // Clear form fields
-        form.reset();
-
-        // Hide toast after 4 seconds
-        setTimeout(function () {
-          toast.classList.remove('show');
-        }, 4000);
+        this.reset();
+        setTimeout(() => toast.classList.remove('show'), 4000);
       }, 1500);
     });
   </script>
 
+  <!-- ==================== BALJEET SINGH LIVE SUPPORT CHAT ==================== -->
+  <script src="js/chat.js"></script>
 </body>
-
 </html>
