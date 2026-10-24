@@ -1131,30 +1131,22 @@ section {
 .card-avatar {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 1.2rem;
   position: relative;
-  width: 90px;
-  height: 90px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .avatar-ring {
   position: absolute;
-  inset: 0;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 2px dashed rgba(108, 99, 255, 0.5);
+  border: 2px dashed rgba(108, 99, 255, 0.4);
   animation: spin 10s linear infinite;
-  z-index: 2;
-  pointer-events: none;
 }
 
 .avatar-text {
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent3));
   display: flex;
@@ -1165,24 +1157,6 @@ section {
   font-weight: 800;
   color: #fff;
   z-index: 1;
-}
-
-.avatar-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 30%;
-  z-index: 1;
-  display: block;
-  overflow: hidden;
-  box-shadow: 0 0 0 3px var(--accent), 0 4px 20px rgba(108, 99, 255, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.avatar-photo:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 0 3px var(--accent3), 0 8px 28px rgba(108, 99, 255, 0.55);
 }
 
 .card-info {
