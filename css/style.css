@@ -1304,6 +1304,35 @@ section {
   z-index: 1;
 }
 
+.about-profile-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 24px;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.about-img-placeholder:hover .about-profile-img {
+  transform: scale(1.03);
+}
+
+.about-img-placeholder::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(10, 10, 20, 0.55), transparent);
+  border-radius: 0 0 24px 24px;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .floating-badge {
   position: absolute;
   background: var(--card);
